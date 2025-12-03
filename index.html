@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binny's Baby Shower - Baby Predictions</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎀 Binny's Baby Shower 🎀</h1>
+            <p class="subtitle">Share Your Predictions About Our Little One!</p>
+        </header>
+
+        <main>
+            <form id="predictionForm" class="prediction-form">
+                <div class="form-group">
+                    <label for="guestName">Your Name *</label>
+                    <input type="text" id="guestName" name="guestName" required placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="relation">Your Relation *</label>
+                    <input type="text" id="relation" name="relation" required placeholder="e.g., Sister, Friend, Colleague">
+                </div>
+
+                <div class="form-group">
+                    <label>Baby's Gender *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="Boy" required>
+                            <span class="radio-custom boy">👶 Boy</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="gender" value="Girl" required>
+                            <span class="radio-custom girl">👧 Girl</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryDate">Predicted Date of Delivery *</label>
+                    <input type="date" id="deliveryDate" name="deliveryDate" required>
+                </div>
+
+                <div class="form-group info-box">
+                    <label>Moon Zodiac Sign (Rashi) Based on Date</label>
+                    <div id="calculatedRashi" class="info-display">
+                        <em>Select a date to see the moon sign</em>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="randomRashi">Random Rashi Selection</label>
+                    <div class="random-rashi-container">
+                        <input type="text" id="randomRashi" name="randomRashi" readonly placeholder="Click button to select random Rashi">
+                        <button type="button" id="randomRashiBtn" class="btn-secondary">🎲 Get Random Rashi</button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="babyName">Predicted Baby Name *</label>
+                    <input type="text" id="babyName" name="babyName" required placeholder="What will the baby be named?">
+                </div>
+
+                <div class="form-group">
+                    <label for="additionalNotes">Additional Wishes or Comments (Optional)</label>
+                    <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Share your wishes, blessings, or fun predictions..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Submit Prediction</button>
+            </form>
+        </main>
+
+        <section id="submittedPredictions" class="predictions-section" style="display: none;">
+            <h2>Your Prediction</h2>
+            <div id="predictionDisplay" class="prediction-card"></div>
+            <button id="newPredictionBtn" class="btn-secondary">Make Another Prediction</button>
+        </section>
+
+        <footer>
+            <p>Made with 💕 for Binny's Baby Shower</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
