@@ -14,14 +14,15 @@ const rashis = [
     { name: 'Meen (Pisces)', sanskrit: 'मीन' }
 ];
 
-// Calculate Rashi based on date (simplified calculation based on month)
+// Calculate Rashi based on date (approximate calculation using Western zodiac dates)
 function calculateRashiFromDate(dateString) {
     const date = new Date(dateString);
-    const month = date.getMonth(); // 0-11
+    const month = date.getMonth(); // 0-11 (0=January, 11=December)
     const day = date.getDate();
 
-    // Approximate Rashi calculation based on solar month
-    // This is a simplified version - actual calculation requires exact planetary positions
+    // Approximate Rashi calculation based on solar zodiac dates
+    // Note: This is a simplified approximation. Actual Vedic astrology requires
+    // precise planetary positions, birth time, and location for accurate calculation
     let rashiIndex = 0;
 
     if ((month === 2 && day >= 21) || (month === 3 && day <= 19)) {
